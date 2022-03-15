@@ -48,4 +48,12 @@ exports.ProductDetailPage = class ProductDetailPage {
       await sizeSelector.selectOption('3');
   }
 
+  async setColourPreference(color) {
+    
+    const colorSelector = this.page.locator(`#color_to_pick_list a[name=${color}]`);
+ 
+    await colorSelector.click();
+
+  }
+
 }
