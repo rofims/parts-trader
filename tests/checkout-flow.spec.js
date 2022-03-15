@@ -27,7 +27,9 @@ test.describe('Check out flow', () => {
     const quantity = 2;
     await cheapestProduct.setProductQuantity(quantity);
     await cheapestProduct.setSize("M");
+    await cheapestProduct.setColourPreference("Green");
     await cheapestProduct.addToCart();
+	
 
     // navigate to checkout page
     const checkoutPage = await cheapestProduct.goToCheckout();
